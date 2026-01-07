@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Congratulations!</title>
+    <title>congrats baby</title>
     <style>
         * {
             margin: 0;
@@ -100,13 +100,47 @@
         <p>thank you so much for playing. maybe you thought all of this was a really big waste of time. and it was.</p>
         <p>but I had so much fun making it. I've had a lot of time on my hand in Sweden. I'm typing this from the apartment in gothenburg with the two tuxedo cats, if you remember. 20:01 on January 7th. you texted me earlier that your mom broke your coffee pot :/ and then you had to call one stop. Double :/</p>
         <p>today for breakfast you were making toast with a bit of cream cheese and strawberry jam and two eggs. I think that sounds so scrumptious.</p>
-        <p>I miss you so much, and can't wait to be back with you.  by the time you're reading this, I hope we've have had many wonderful weeks in the dorms together. i'm looking forward to that</p>
-        <p>I love you so much more than I could ever put into words. My life is so much better with you in it. I hope you're doing bombastically wonderful at the moment. Honey, you're so severely wonderful and amazing in every way and I love you.</p>
+        <p id="dateMessage">I miss you so much, and can't wait to be back with you. by the time you're reading this, I hope we've have had many wonderful weeks in the dorms together. I don't know how long it took you to complete this, but happy birthday or happy late birthday or happy valentine's day baby</p>
+        <p>I love you so much more than I could ever put into words. My life is so much better with you in it. I hope you're doing bombastically wonderful at the moment.</p><p>Honey, you're genuinely wonderful and amazing in every way and I love you with all my heart. </p>
         <p>Always yours,</p>
         <p>Alexander</p>
         <a href="addPass_92a544cff4_2026-01-07T18_48_21.365Z.pkpass" class="wallet-button">
             <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Add_to_Apple_Wallet_badge.svg" alt="Add to Apple Wallet">
         </a>
     </div>
+
+    <script>
+        // Update the message based on the current date
+        function updateDateMessage() {
+            const today = new Date();
+            const day = today.getDate();
+            const month = today.getMonth() + 1; // getMonth() returns 0-11
+            
+            const messageEl = document.getElementById('dateMessage');
+            let baseMessage = "I miss you so much, and can't wait to be back with you. by the time you're reading this, I hope we've have had many wonderful weeks in the dorms together.";
+            let greeting = "";
+            
+            // Check if we're in January or February for the special dates
+            if (month === 1 && day >= 10 && day <= 13) {
+                // January 10-13
+                if (day === 10) {
+                    greeting = " happy birthday baby";
+                } else {
+                    greeting = " happy late birthday baby";
+                }
+            } else if (month === 2 && day === 14) {
+                // February 14
+                greeting = " happy valentine's day baby";
+            } else {
+                // Default message for all other dates
+                baseMessage += " I don't know how long it took you to complete this, but happy birthday or happy late birthday or happy valentine's day baby";
+            }
+            
+            messageEl.textContent = baseMessage + greeting;
+        }
+        
+        // Run when the page loads
+        updateDateMessage();
+    </script>
 </body>
 </html>
