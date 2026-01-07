@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #ccc;
+        }
+
+        .wallet-button {
+            display: inline-block;
+            margin-top: 1rem;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            cursor: pointer;
+        }
+
+        .wallet-button:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        .wallet-button:active {
+            transform: scale(0.98);
+        }
+
+        .wallet-button img {
+            width: 200px;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .wallet-button img {
+                width: 180px;
+            }
+        }
+
+        @media (max-width: 320px) {
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            .wallet-button img {
+                width: 160px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Congratulations!</h1>
+        <p>You've achieved something amazing! Save this moment to your Apple Wallet and keep it with you always.</p>
+        
+        <a href="addPass_08ba2abf1f_2026-01-07T18_42_52.643Z (1).pkpass" class="wallet-button">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Add_to_Apple_Wallet_badge.svg" alt="Add to Apple Wallet">
+        </a>
+    </div>
+</body>
+</html>
